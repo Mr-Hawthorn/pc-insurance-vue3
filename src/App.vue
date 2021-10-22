@@ -5,17 +5,60 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+  <div class="common-layout"> 
+    <el-container>
+      <el-header>
+        <span>向日葵保险</span>
+        <span class="floatR">
+          <span>1506667894</span>
+          <span>退出</span>
+        </span>
+      </el-header>
+      <el-main>Main</el-main>
+      <el-footer>
+        <div class="foot_img"></div>
+        <div>ICP</div>
+      </el-footer>
+    </el-container>
+  </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+<style lang="less">
+body,html {
+  margin: 0;
+  padding: 0;
+}
+.floatR{
+  float:right;
+  span {
+    margin-left: 10px;
+  }
+}
+.el-header{
+  height: 32px;
+  line-height: 32px;
+  font-size: 12px;
+  padding: 0 120px;
+  background: #333;
+  color: #fff;
+}
+.el-footer {
+  background-color: #b3c0d1;
+  color: var(--el-text-color-primary);
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  padding: 0;
+  .foot_img {
+    width: 100%;
+    height: 90px;
+    background: url(./assets/home_foot.png) center center no-repeat #ff6f10;
+  }
+}
+
+.el-main {
+  background-color: #e9eef3;
+  color: var(--el-text-color-primary);
+  text-align: center;
+  line-height: 160px;
 }
 </style>
+
